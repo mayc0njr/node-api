@@ -32,11 +32,14 @@ stages:
       displayName: Copy files to Staging
 
       steps:
-      - task: CopyFiles@2
+      - task: ArchiveFiles@2
         inputs:
-          sourceFolder: '$(Build.SourcesDirectory)'
-          Contents: 'dist/**'
-          targetFolder: $(Build.ArtifactStagingDirectory)
+          rootFolderOrFile: 'src/dist'
+          includeRootFolder: true
+          archiveType: 'zip'
+          archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+          replaceExistingArchive: true
+      
 
       - task: PublishBuildArtifacts@1
         displayName: 'Publish Artifact'
