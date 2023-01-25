@@ -1,5 +1,5 @@
 import { AppError } from "@shared/errors/AppError";
-import { PdfOptions } from "@src/models/PdfOptions";
+import { PdfOptions } from "@models/PdfOptions";
 import ejs from "ejs";
 import { PDFDocument } from "pdf-lib";
 import puppeteer from "puppeteer";

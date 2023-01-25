@@ -1,5 +1,5 @@
 import { AppError } from "@shared/errors/AppError";
-import { CapoeiraRepository } from "@src/repositories/capoeira/CapoiraRepository";
+import { CapoeiraRepository } from "@repositories/capoeira/CapoiraRepository";
 
 export class CapoeiraService {
   constructor(private repository: CapoeiraRepository) {}

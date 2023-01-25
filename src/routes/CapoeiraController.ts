@@ -1,5 +1,5 @@
-import { CapoeiraRepository } from "@src/repositories/capoeira/CapoiraRepository";
-import { PdfService } from "@src/services/PdfService";
+import { CapoeiraRepository } from "@repositories/capoeira/CapoiraRepository";
+import { PdfService } from "@services/PdfService";
 import { CapoeiraUseCase } from "@useCases/CapoeiraUseCase";
 import { Router } from "express";
 

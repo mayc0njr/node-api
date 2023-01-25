@@ -1,4 +1,4 @@
-import { Exame } from "@src/models/Exame";
+import { Exame } from "@models/Exame";
 import "dotenv/config";
 import apiConfig from "./AxiosConfig";
 

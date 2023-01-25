@@ -1,8 +1,8 @@
 import { AppError } from "@shared/errors/AppError";
-import { Exame } from "@src/models/Exame";
-import { PdfOptions } from "@src/models/PdfOptions";
-import { CapoeiraRepository } from "@src/repositories/capoeira/CapoiraRepository";
-import { PdfService } from "@src/services/PdfService";
+import { Exame } from "@models/Exame";
+import { PdfOptions } from "@models/PdfOptions";
+import { CapoeiraRepository } from "@repositories/capoeira/CapoiraRepository";
+import { PdfService } from "@services/PdfService";
 import path from "path";
 
 export class CapoeiraUseCase {
