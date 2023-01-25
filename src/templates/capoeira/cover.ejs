@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/global.css" type="text/css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    .text {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .cover-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cover-header {
+      display: flex;
+      margin: 40px 64px;
+    }
+
+    .cover-header-img {
+      width: 88px;
+      height: 88px;
+    }
+
+    .cover-header-img>img {
+      max-width: 100%;
+      height: 100%;
+    }
+
+    .cover-header-text {
+      display: flex;
+      flex-direction: column;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      gap: 24px;
+    }
+
+    .cover-header-text-title {
+      color: #006a61;
+      font-size: 24px;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .cover-header-text-subtitle {
+      color: #393939;
+      font-size: 32px;
+      line-height: 24px;
+      letter-spacing: 0.25px;
+    }
+
+    .cover-information {
+      display: flex;
+      flex-direction: column;
+      margin: 176px 64px 40px 64px;
+    }
+
+    .cover-information-machine {
+      display: flex;
+      height: 128px;
+    }
+
+    .cover-information-rectangle {
+      width: 14px;
+      height: 100%;
+      background-color: #006a61;
+    }
+
+    .cover-information-machine-text {
+      margin-left: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+    }
+
+    .cover-information-machine-title {
+      color: #006a61;
+      font-size: 72px;
+      line-height: 72px;
+    }
+
+    .cover-information-machine-subtitle {
+      color: #393939;
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: 0.775px;
+    }
+
+    .cover-information-appreciation {
+      margin: 96px 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      font-family: "Lato", sans-serif;
+      color: #393939;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      row-gap: 16px;
+    }
+
+    .cover-information-appreciation-title {
+      font-weight: 400;
+    }
+
+    .cover-information-appreciation-subtitle {
+      font-weight: 700;
+    }
+
+    .cover-information-image {
+      height: 320px;
+      display: flex;
+      width: 100%;
+      border: 0.5px solid #edeef0;
+      border-radius: 4px;
+      padding: 8px;
+      column-gap: 8px;
+    }
+
+    .cover-information-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    .cover-footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 40px 64px;
+    }
+
+    .cover-footer-responsible {
+      display: flex;
+      font-family: "Lato", sans-serif;
+      color: #393939;
+      column-gap: 120px;
+      justify-content: space-around;
+    }
+
+    .cover-footer-responsible-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cover-footer-responsible-title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.25px;
+      margin-bottom: 16px;
+    }
+
+    .cover-footer-responsible-names {
+      margin-bottom: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.25px;
+    }
+
+    .cover-footer-operational-info {
+      margin: 72px 0 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 16px;
+    }
+
+    .cover-information-operational-title {
+      font-weight: 640;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 0.25px;
+    }
+
+    .cover-information-operational-subtitle {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: 0.4px;
+      color: #a8a8a8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cover-container">
+    <section class="cover-header">
+      <section class="cover-header-img"> <img
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8IS0tIENyZWF0b3I6IENvcmVsRFJBVyBYNSAtLT4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNi43MmluIiBoZWlnaHQ9IjYuNzJpbiIgc3R5bGU9InNoYXBlLXJlbmRlcmluZzpnZW9tZXRyaWNQcmVjaXNpb247IHRleHQtcmVuZGVyaW5nOmdlb21ldHJpY1ByZWNpc2lvbjsgaW1hZ2UtcmVuZGVyaW5nOm9wdGltaXplUXVhbGl0eTsgZmlsbC1ydWxlOmV2ZW5vZGQ7IGNsaXAtcnVsZTpldmVub2RkIg0Kdmlld0JveD0iMCAwIDY3MjAgNjcyMCINCiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+DQogPGRlZnM+DQogIDxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+DQogICA8IVtDREFUQVsNCiAgICAuZmlsMSB7ZmlsbDpub25lfQ0KICAgIC5maWwwIHtmaWxsOmJsYWNrO2ZpbGwtcnVsZTpub256ZXJvfQ0KICAgXV0+DQogIDwvc3R5bGU+DQogPC9kZWZzPg0KIDxnIGlkPSJMYXllcl94MDAyMF8xIj4NCiAgPG1ldGFkYXRhIGlkPSJDb3JlbENvcnBJRF8wQ29yZWwtTGF5ZXIiLz4NCiAgPGcgaWQ9Il8zNzU3MDg4OTYiPg0KICAgPHBhdGggY2xhc3M9ImZpbDAiIGQ9Ik01NzYwIDk2MGMtMzA1LC01IC0xMTA3LDI0IC0xOTYyLDM5MSAtOTI3LDM5NyAtMTkxNSwxMTkyIC0yMzk5LDI3NzVsNTk4IDU5OCA1OTggNTk4YzE1ODMsLTQ4NCAyMzc4LC0xNDcyIDI3NzUsLTIzOTkgMzY2LC04NTUgMzk1LC0xNjU2IDM5MSwtMTk2MnptLTIwMjQgMjQ0Yzk2MCwtNDExIDE4NTYsLTQxMCAyMDk5LC00MDFsMCAwYzQ0LC0yIDgxLDMzIDgzLDc3bC04MCAzIDgwIC0zYzksMjMzIDE0LDExMzcgLTQwMSwyMTA1IC00MTUsOTcwIC0xMjUwLDIwMDUgLTI5MTYsMjUwMSAtMjksMTEgLTYyLDUgLTg1LC0xOGwwIDAgLTYzMiAtNjMyIC02MzAgLTYzMGMtMjEsLTIwIC0zMCwtNTEgLTIyLC04MWwwIDBjNDk1LC0xNjcwIDE1MzIsLTI1MDYgMjUwMywtMjkyMnoiLz4NCiAgIDxwYXRoIGNsYXNzPSJmaWwwIiBkPSJNNDUyMyAyMTk3YzE0MCwxNDAgMjEwLDMyNCAyMTAsNTA4IDAsMTg0IC03MCwzNjcgLTIxMCw1MDggLTE0MCwxNDAgLTMyNCwyMTAgLTUwOCwyMTAgLTE4NCwwIC0zNjcsLTcwIC01MDgsLTIxMCAtMTQwLC0xNDAgLTIxMCwtMzI0IC0yMTAsLTUwOCAwLC0xODQgNzAsLTM2NyAyMTAsLTUwOCAxNDAsLTE0MCAzMjQsLTIxMCA1MDgsLTIxMCAxODQsMCAzNjcsNzAgNTA4LDIxMHptNTAgNTA4YzAsLTE0MyAtNTQsLTI4NiAtMTYzLC0zOTUgLTEwOSwtMTA5IC0yNTIsLTE2MyAtMzk1LC0xNjMgLTE0MywwIC0yODYsNTQgLTM5NSwxNjMgLTEwOSwxMDkgLTE2MywyNTIgLTE2MywzOTUgMCwxNDMgNTQsMjg2IDE2MywzOTUgMTA5LDEwOSAyNTIsMTYzIDM5NSwxNjMgMTQzLDAgMjg2LC01NCAzOTUsLTE2MyAxMDksLTEwOSAxNjMsLTI1MiAxNjMsLTM5NXoiLz4NCiAgIDxwYXRoIGNsYXNzPSJmaWwwIiBkPSJNOTkyIDM2MDNsNDExIDMxYzkwLC0yMjUgMTkwLC00MzEgMjk5LC02MjEgNjUsLTExNCAxMzQsLTIyMiAyMDUsLTMyNSAtMTIzLDYwIC0yNTcsMTM5IC0zODcsMjM5IC0yMDksMTYyIC00MDcsMzgyIC01MjgsNjc1em00NTcgMTk1bC01NzEgLTQ0Yy04LDAgLTE2LC0yIC0yNCwtNCAtNDIsLTE0IC02NCwtNTkgLTUwLC0xMDFsMCAwYzEyNywtMzc4IDM2NiwtNjUyIDYxOCwtODQ4IDI1MCwtMTkzIDUxMiwtMzEwIDY5MywtMzc1IDI2LC0xMCA1NiwtNyA4MCwxMiAzNSwyOCA0MCw3OCAxMywxMTJsMCAwYy0xMzAsMTYyIC0yNTMsMzQzIC0zNjgsNTQzIC0xMTMsMTk4IC0yMTcsNDE0IC0zMDgsNjQ4IC0xMCwzNSAtNDUsNjAgLTgzLDU3bDAgMHoiLz4NCiAgIDxwYXRoIGNsYXNzPSJmaWwwIiBkPSJNMjk2NiA1ODQybC00NCAtNTcxIDAgMGMtMywtMzggMjIsLTcyIDU3LC04MyAyMzUsLTkxIDQ1MCwtMTk1IDY0OCwtMzA4IDIwMCwtMTE1IDM4MCwtMjM4IDU0MywtMzY4bDAgMGMzNSwtMjggODUsLTIyIDExMiwxMyAxOSwyMyAyMiw1NCAxMiw4MCAtNjUsMTgxIC0xODIsNDQ0IC0zNzUsNjkzIC0xOTYsMjUzIC00NzAsNDkyIC04NDgsNjE4bDAgMGMtNDIsMTQgLTg3LC04IC0xMDEsLTUwIC0zLC04IC00LC0xNiAtNCwtMjR6bTEyMCAtNTI1bDMxIDQxMWMyOTQsLTEyMSA1MTMsLTMxOSA2NzUsLTUyOCAxMDAsLTEzMCAxNzksLTI2NCAyMzksLTM4NiAtMTAzLDcyIC0yMTEsMTQwIC0zMjUsMjA1IC0xOTAsMTA5IC0zOTYsMjA5IC02MjEsMjk5eiIvPg0KICAgPHBhdGggY2xhc3M9ImZpbDAiIGQ9Ik0xMzczIDQ1NTBsNzk3IDc5N2MxNSwxNSAzNiwyMyA1NiwyMyAyMCwwIDQwLC03IDU1LC0yMiAxLC0xIDEsLTEgMiwtMiAxNSwtMTUgMjIsLTM1IDIyLC01NSAwLC0yMCAtOCwtNDEgLTIzLC01NmwwIDAgLTc5NyAtNzk3Yy0xNSwtMTUgLTM2LC0yMyAtNTYsLTIzIC0yMCwwIC00MSw4IC01NiwyM2wwIDAgMCAwYy0xNSwxNSAtMjMsMzYgLTIzLDU2bDAgMGMwLDIwIDgsNDEgMjMsNTZ6bTY4NCA5MTBsLTc5NyAtNzk3Yy00NiwtNDYgLTcwLC0xMDggLTcwLC0xNjlsMCAwYzAsLTYxIDIzLC0xMjEgNjgsLTE2NyAxLC0xIDIsLTIgNCwtNCA0NiwtNDUgMTA3LC02OCAxNjcsLTY4IDYxLDAgMTIzLDIzIDE2OSw3MGw3OTcgNzk3IDAgMGM0Nyw0NyA3MCwxMDggNzAsMTY5IDAsNjEgLTIzLDEyMiAtNjksMTY5bC0xIDEgMCAwYy00Nyw0NyAtMTA4LDcwIC0xNjksNzAgLTYxLDAgLTEyMywtMjMgLTE2OSwtNzB6Ii8+DQogICA8cGF0aCBjbGFzcz0iZmlsMCIgZD0iTTE4ODMgNTYzNGMtNDYsNDEgLTM5OCwzMzIgLTg4OCwxMjdsMzEgLTc0IC0zMSA3NGMtMjIsLTkgLTM4LC0yNyAtNDUsLTQ4IC0yMTIsLTUxNSAxMjIsLTg3NSAxMzQsLTg4OGwwIDAgMCAwIDAgMGMxLC0xIDMsLTMgNCwtNCA0OCwtNTEgOTksLTkwIDE1MiwtMTE5IDU5LC0zMiAxMjAsLTUyIDE4MSwtNjBsMCAwYzM0LC01IDY3LDEzIDgyLDQzIDEsMiAyLDMgMyw1IDEsMiA0LDQgNyw4bDUxMSA1MTFjMiwyIDQsNCA2LDUgMywyIDUsNCA2LDVsLTQ0IDY3IDQ0IC02N2MyOCwxOSA0MSw1MyAzNCw4NCAtOSw1OCAtMjgsMTE3IC01OSwxNzMgLTMwLDU0IC03MCwxMDYgLTEyMywxNTVsMCAwYy0yLDIgLTMsMyAtNSw0em0tNzk2IC04YzM4NywxNDQgNjU2LC04MSA2ODgsLTExMCAxLC0xIDIsLTIgNCwtM2w1NSA1OSAtNTQgLTU4YzQwLC0zNyA3MCwtNzYgOTEsLTExNSAxNSwtMjcgMjYsLTU1IDM0LC04M2wtNTA1IC01MDUgLTEgLTFjLTI4LDcgLTU1LDE4IC04MiwzMyAtMzgsMjEgLTc2LDUwIC0xMTIsODggLTEsMSAtMiwzIC0zLDRsLTU4IC01NSA1OCA1NWMtMSwxIC0yNjcsMjc5IC0xMTMsNjkyeiIvPg0KICA8L2c+DQogPC9nPg0KIDxyZWN0IGNsYXNzPSJmaWwxIiB3aWR0aD0iNjcyMCIgaGVpZ2h0PSI2NzIwIi8+DQo8L3N2Zz4NCg=="
+          alt="Vale logo" /> </section>
+      <section class="cover-header-text"> <span class="cover-header-text-title">FOGUETE</span> <span
+          class="cover-header-text-subtitle">Avaliação de Capoeira - Cordel Verde-Amarelo</span> </section>
+    </section>
+    <section class="cover-information">
+      <section class="cover-information-machine">
+        <div class="cover-information-rectangle"></div>
+        <section class="cover-information-machine-text"> <span class="cover-information-machine-title">XPTO-1A</span>
+          <span class="cover-information-machine-subtitle">Capoeira - Zumbi dos Palmares</span> </section>
+      </section>
+      <section class="cover-information-appreciation"> <span class="cover-information-appreciation-title">Revisão
+          01</span> <span class="cover-information-appreciation-subtitle">20/02/2022</span> </section>
+      <section class="cover-information-image"> <img class="cover-information-img"
+          src="https://cdn.pixabay.com/photo/2023/01/12/07/19/rat-7713508_960_720.jpg"
+          alt="Foto1" /> <img class="cover-information-img"
+          src="https://cdn.pixabay.com/photo/2023/01/12/07/19/rat-7713508_960_720.jpg"
+          alt="Foto2" /> </section>
+    </section>
+    <section class="cover-footer">
+      <section class="cover-footer-responsible">
+        <section class="cover-footer-responsible-text"> <span class="cover-footer-responsible-title">Grão-Mestres</span> <span class="cover-footer-responsible-names">Diógenes Nazário</span> <span
+            class="cover-footer-responsible-names">Lionel Edesvon</span> </section>
+        <section class="cover-footer-responsible-text"> <span class="cover-footer-responsible-title">Mestres</span> <span class="cover-footer-responsible-names">Asdrúbal Aveiro</span> <span
+            class="cover-footer-responsible-names">Ronaldinho Melquizedeque</span> </section>
+      </section>
+      <section class="cover-footer-operational-info"> <span class="cover-information-operational-title">Local da Roda</span> <span class="cover-information-operational-subtitle">19/02/2022 16:04 (GMT -3)
+        </span> </section>
+    </section>
+  </div>
+</body>
+
+</html>

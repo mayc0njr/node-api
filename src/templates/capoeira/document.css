@@ -1,0 +1,51 @@
+html {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+.text {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.dark-bg {
+    color: #ff0000;
+    background-color: #1c551c;
+}
+
+.light-bg {
+    color: #4400ff;
+    background-color: #ffa8a8;
+}
+
+.title {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 14px;
+    border: black 1px solid;
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.body {
+    border: black 1px solid;
+    font-size: 12px;
+    padding: 5px 15px;
+}
+
+.container {
+    margin: 5px 10px;
+}

@@ -1,0 +1,33 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Capoeira Example",
+    "description": "API Rest to generate PDF Files for Capoeira Exams."
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/capoeira/{exameId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "exameId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

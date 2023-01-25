@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/global.css" type="text/css"/>
+        <style>
+        html {
+            print-color-adjust: exact;
+            -webkit-print-color-adjust: exact;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        .text {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .dark-bg {
+            color: #ff0000;
+            background-color: #1c551c;
+        }
+
+        .light-bg {
+            color: #4400ff;
+            background-color: #ffa8a8;
+        }
+
+        .title {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            font-size: 14px;
+            border: black 1px solid;
+            padding: 5px 15px;
+            text-align: center;
+        }
+
+        .body {
+            border: black 1px solid;
+            font-size: 12px;
+            padding: 5px 15px;
+        }
+
+        .container {
+            width: 50%;
+        }</style>
+    </head>
+    <body>
+        <div class="container" style="width: 100%">
+            <div class="title dark-bg" style="background: linear-gradient(96.09deg, #F26522 -2.18%, #FFA800 104%);">
+                <span><%= exame.capoeirista.name  %> / <%= exame.capoeirista.age  %></span>
+            </div>
+            <div class="body">
+                <div class="container">
+                    <div class="title dark-bg">
+                        <span>Relatório</span>
+                    </div>
+                    <div class="body">
+                        svg
+                        <img alt="Imagem de QRCode" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0Ljc1MDIgMC41SDIuMjUwMTZDMS4zMzM1IDAuNSAwLjU4MzQ5NiAxLjI1IDAuNTgzNDk2IDIuMTY2NjdWMTMuODMzM0MwLjU4MzQ5NiAxNC43NSAxLjMzMzUgMTUuNSAyLjI1MDE2IDE1LjVIMTQuNzUwMkMxNS42NjY4IDE1LjUgMTYuNDE2OCAxNC43NSAxNi40MTY4IDEzLjgzMzNWMi4xNjY2N0MxNi40MTY4IDEuMjUgMTUuNjY2OCAwLjUgMTQuNzUwMiAwLjVaTTE0Ljc1MDIgMi4xNjY2N1Y0LjY2NjY3SDIuMjUwMTZWMi4xNjY2N0gxNC43NTAyWk0xMC41ODM1IDEzLjgzMzNINi40MTY4M1Y2LjMzMzMzSDEwLjU4MzVWMTMuODMzM1pNMi4yNTAxNiA2LjMzMzMzSDQuNzUwMTZWMTMuODMzM0gyLjI1MDE2VjYuMzMzMzNaTTEyLjI1MDIgMTMuODMzM1Y2LjMzMzMzSDE0Ljc1MDJWMTMuODMzM0gxMi4yNTAyWiIgZmlsbD0iIzM5MzkzOSIvPgo8L3N2Zz4K">
+                        <img alt="Imagem de QRCode" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNSAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuMzMzMzMgMTIuMzMzMkg5LjE2NjY3VjEzLjk5OThIMy4zMzMzM1YxMi4zMzMyWk0zLjMzMzMzIDguOTk5ODRIMTEuNjY2N1YxMC42NjY1SDMuMzMzMzNWOC45OTk4NFpNMy4zMzMzMyA1LjY2NjVIMTEuNjY2N1Y3LjMzMzE3SDMuMzMzMzNWNS42NjY1Wk0xMy4zMzMzIDIuMzMzMTdIOS44NUM5LjUgMS4zNjY1IDguNTgzMzMgMC42NjY1MDQgNy41IDAuNjY2NTA0QzYuNDE2NjcgMC42NjY1MDQgNS41IDEuMzY2NSA1LjE1IDIuMzMzMTdIMS42NjY2N0MxLjU1IDIuMzMzMTcgMS40NDE2NyAyLjM0MTUgMS4zMzMzMyAyLjM2NjVDMS4wMDgzMyAyLjQzMzE3IDAuNzE2NjY3IDIuNTk5ODQgMC40OTE2NjcgMi44MjQ4NEMwLjM0MTY2NyAyLjk3NDg0IDAuMjE2NjY3IDMuMTU4MTcgMC4xMzMzMzMgMy4zNTgxN0MwLjA1MDAwMDEgMy41NDk4NCAwIDMuNzY2NSAwIDMuOTk5ODRWMTUuNjY2NUMwIDE1Ljg5MTUgMC4wNTAwMDAxIDE2LjExNjUgMC4xMzMzMzMgMTYuMzE2NUMwLjIxNjY2NyAxNi41MTY1IDAuMzQxNjY3IDE2LjY5MTUgMC40OTE2NjcgMTYuODQ5OEMwLjcxNjY2NyAxNy4wNzQ4IDEuMDA4MzMgMTcuMjQxNSAxLjMzMzMzIDE3LjMwODJDMS40NDE2NyAxNy4zMjQ4IDEuNTUgMTcuMzMzMiAxLjY2NjY3IDE3LjMzMzJIMTMuMzMzM0MxNC4yNSAxNy4zMzMyIDE1IDE2LjU4MzIgMTUgMTUuNjY2NVYzLjk5OTg0QzE1IDMuMDgzMTcgMTQuMjUgMi4zMzMxNyAxMy4zMzMzIDIuMzMzMTdaTTcuNSAyLjEyNDg0QzcuODQxNjcgMi4xMjQ4NCA4LjEyNSAyLjQwODE3IDguMTI1IDIuNzQ5ODRDOC4xMjUgMy4wOTE1IDcuODQxNjcgMy4zNzQ4NCA3LjUgMy4zNzQ4NEM3LjE1ODMzIDMuMzc0ODQgNi44NzUgMy4wOTE1IDYuODc1IDIuNzQ5ODRDNi44NzUgMi40MDgxNyA3LjE1ODMzIDIuMTI0ODQgNy41IDIuMTI0ODRaTTEzLjMzMzMgMTUuNjY2NUgxLjY2NjY3VjMuOTk5ODRIMTMuMzMzM1YxNS42NjY1WiIgZmlsbD0iIzM5MzkzOSIvPgo8L3N2Zz4K">
+                        <% exame.prova.hazards.forEach(hazard => {%>
+                            <div class="container">
+                                <div class="title dark-bg">
+                                    Local: <%= exame.prova.local %><br>
+                                    Perigo
+                                </div>
+                                <div class="body light-bg">
+                                    <br>Tipo: <%= hazard.type %>
+                                    <br>Origem: <%= hazard.origin %>
+                                    <br>Consequencia: <%= hazard.consequence %>
+                                    <br>
+                                </div>
+                            </div>
+                        <%  });%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 85%; margin: 0 7.5%;">
+            <div style="text-align: center; padding-left: 50px;">
+                <h3>Exame Report</h5>
+                <table>
+                    <% exame.prova.hazards.forEach(() => {%>
+                        <tr><td colspan="3"><div class="title light-bg">
+                            <img src="https://cdn.pixabay.com/photo/2023/01/12/07/19/rat-7713508_960_720.jpg" alt="" srcset="">
+                        </div></td></tr>
+                        <% exame.prova.hazards.forEach(exame2 => {%>
+                           <tr><td><%= exame.capoeirista.name %></td><td><%= exame.capoeirista.tag %></td><td><%= exame.capoeirista.name %></td><td><%=exame.capoeirista.tag %></td></tr>
+                        <%  });%>
+                    <%  });%>
+                </table>
+             </div>
+        </div>
+    </body>
+</html>

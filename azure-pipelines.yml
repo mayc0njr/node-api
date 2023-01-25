@@ -1,0 +1,41 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Job_1
+  displayName: Install Node 18 LTS and Build project
+
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '18.x'
+    displayName: 'Install Node.js'
+
+  - script: npm ci --include=dev
+    displayName: 'npm install build'
+
+  - script: npm run build
+    displayName: 'npm build'
+
+  - script: npm ci --production
+    workingDirectory: dist
+    displayName: 'npm install production'
+
+- job: Job_2
+  displayName: Copy files to Staging
+
+  steps:
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Build.SourcesDirectory)'
+      Contents: 'dist/**'
+      targetFolder: $(Build.ArtifactStagingDirectory)
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    
