@@ -4,44 +4,39 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-stages:
-  - stage: STAGE1
-    jobs:
-    - job: Job_1
-      displayName: Install Node 18 LTS and Build project
+  jobs:
+  - job: Job_1
+    displayName: Install Node 18 LTS and Build project
 
-      steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '18.x'
-        displayName: 'Install Node.js'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '18.x'
+      displayName: 'Install Node.js'
 
-      - script: npm ci --include=dev
-        displayName: 'npm install build'
+    - script: npm ci --include=dev
+      displayName: 'npm install build'
 
-      - script: npm run build
-        displayName: 'npm build'
+    - script: npm run build
+      displayName: 'npm build'
 
-      - script: npm ci --production
-        workingDirectory: dist
-        displayName: 'npm install production'
-  - stage: STAGE2
-    dependsOn: STAGE1
-    jobs:
-    - job: Job_2
-      displayName: Copy files to Staging
+    - script: npm ci --production
+      workingDirectory: dist
+      displayName: 'npm install production'
 
-      steps:
-      - task: ArchiveFiles@2
-        inputs:
-          rootFolderOrFile: 'dist'
-          includeRootFolder: true
-          archiveType: 'zip'
-          archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-          replaceExistingArchive: true
-      
+    - bash: ls src
+      displayName: 'Check directories'
 
-      - task: PublishBuildArtifacts@1
-        displayName: 'Publish Artifact'
-        inputs:
-          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: 'dist'
+        includeRootFolder: true
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        replaceExistingArchive: true
+    
+
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
